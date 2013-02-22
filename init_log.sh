@@ -31,6 +31,7 @@ mkdir -p /logs/nginx/$p/dev
 mkdir -p /logs/nginx/$p/blog
 mkdir -p /logs/nginx/$p/crm
 
+chmod -R 777 /logs/*
 
 echo "Create $p's log path OK!";
 

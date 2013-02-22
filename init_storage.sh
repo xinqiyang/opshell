@@ -22,8 +22,12 @@ mkdir -p /storages/sphinx
 #hadoop
 mkdir -p /storages/hadoop
 
+#mongodb
+mkdir -p /storages/mongodb
+
 
 #set permission
+chmod -R 777 /storages/*
 #chown www:www /storages/*
 
 

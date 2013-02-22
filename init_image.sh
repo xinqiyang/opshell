@@ -19,7 +19,9 @@ mkdir -p /images/$p/48
 mkdir -p /images/$p/24
 
 #todo set permission
+chmod -R 777 /images/*
 #chown www:www /images/*
 
 
 
+	

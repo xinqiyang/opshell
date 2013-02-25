@@ -30,6 +30,8 @@ mkdir -p /logs/nginx/$p/img
 mkdir -p /logs/nginx/$p/dev
 mkdir -p /logs/nginx/$p/blog
 mkdir -p /logs/nginx/$p/crm
+mkdir -p /logs/nginx/$p/res
+
 
 chmod -R 777 /logs/*
 

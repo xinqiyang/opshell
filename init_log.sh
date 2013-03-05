@@ -21,6 +21,8 @@ mkdir -p /logs/php/$p/dev
 mkdir -p /logs/php/$p/blog
 mkdir -p /logs/php/$p/crm
 
+mkdir -p /logs/java/$p
+
 
 mkdir -p /logs/nginx/$p/web
 mkdir -p /logs/nginx/$p/api

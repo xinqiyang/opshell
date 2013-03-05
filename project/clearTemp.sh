@@ -1,5 +1,5 @@
 #!/bin/bash
-root="/source/freeflare/server/php/web/"
+root="/source/freeflare/server/web/"
 
 WEB_DIR=$root"Presentation/Web/Temp"
 MIS_DIR=$root"Presentation/Mis/Temp"

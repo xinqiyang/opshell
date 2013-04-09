@@ -1,4 +1,6 @@
+#readme#
 
+add hadoop && hbase install script 
 
 lock scripts:
 

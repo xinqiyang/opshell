@@ -2,12 +2,12 @@
 
 #copy id_rsa.pub to target machine
 
-if [$1 -eq null]; then 
+if [ "$1" == "" ]; then 
    echo "please user!"
    exit
 fi
 
-if [$2 -eq null]; then 
+if [ "$2" == "" ]; then 
    echo "please input machine ip address!"
    exit
 fi

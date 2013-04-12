@@ -10,7 +10,7 @@
 #change to root
 #su root
 
-user=root
+user=hadoop
 iplist=`cat machine.conf`
 
 jdk=jdk-6u32-linux-x64.bin
@@ -18,7 +18,7 @@ hadoop=hadoop-1.0.4.tar.gz
 hbase=hbase-0.94.6.tar.gz
 opshell=opshell
 packageBase=/home/hadoop
-packagePath=/home/hadoop/packages
+packagePath=/home/hadoop/cdh4
 
 
 
@@ -26,8 +26,8 @@ packagePath=/home/hadoop/packages
 for ip in $iplist;do
 	echo "=======now install $ip ==========="	
 	#create user
-	ssh $user@$ip "useradd hadoop"
-	ssh $user@$ip "passwd hadoop"
+	#ssh $user@$ip "useradd hadoop"
+	#ssh $user@$ip "passwd hadoop"
 	
 	#move all danger
 	ssh $user@$ip "rm -rf $packageBase/*"

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>
+  <name>dfs.name.dir</name>
+  <value>${hadoop.tmp.dir}/hdfs/name</value>
+ </property>
+
+ <property>
+  <name>dfs.data.dir</name>
+  <value>${hadoop.tmp.dir}/hdfs/data</value>
+ </property>
+
+ <property>
+  <name>dfs.replication</name>
+  <value>3</value>
+  <description>num of replication</description>
+ </property>
+
+<property>
+    <name>dfs.permissions</name>
+    <value>false</value>
+</property>
+
+<property>
+    <name>dfs.support.append</name>
+    <value>true</value>
+</property>
+
+<property>
+      <name>dfs.namenode.secondary.http-address</name>
+      <value>hdfs://hadoop3:8020</value>
+</property>
+
+</configuration>

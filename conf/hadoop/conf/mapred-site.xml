@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>
+<name>mapred.job.tracker</name>
+<value>hadoop1:8201</value>
+</property>
+
+<property>
+<name>mapred.local.dir</name>
+<value>/home/hadoop/hadoop/mapred/local</value>
+</property>
+
+<property>
+<name>mapred.system.dir</name>
+<value>/tmp/hadoop/mapred/system</value>
+</property>
+
+<property>
+<name>mapred.child.java.opts</name>
+<!--<value>-Xmx200m -Xdebug -Xrunjdwp:transport=dt_socket,address=7788,server=y,suspend=y</value> -->
+<value>-Xmx200m</value>
+</property>
+
+<property>
+<name>mapred.tasktracker.map.tasks.maximum</name>
+<value>1</value>
+</property>
+
+<property>
+<name>mapred.tasktracker.reduce.tasks.maximum</name>
+<value>1</value>
+</property>
+
+<property>
+<name>mapred.task.timeout</name>
+<value>100000000</value>
+</property>
+
+</configuration>

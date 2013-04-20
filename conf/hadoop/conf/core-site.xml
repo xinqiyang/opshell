@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>
+<name>fs.default.name</name>
+<value>hdfs://hadoop1:8020</value>
+<description>HDFS's URI, file system://namenode ID:Port</description>
+</property>
+
+<property>
+  <name>hadoop.tmp.dir</name>
+  <value>/home/hadoop/hadoop-datastore/hadoop-${user.name}</value>
+  <description>A base for other temporary directories.</description>
+</property>
+
+</configuration>

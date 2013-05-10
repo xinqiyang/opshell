@@ -48,7 +48,7 @@ cp /etc/yum.conf /etc/yum.conf.lnmp
 sed -i 's:exclude=.*:exclude=:g' /etc/yum.conf
 
 #need crontab 
-for packages in patch make gcc gcc-c++ gcc-g77 flex bison file libtool libtool-libs autoconf kernel-devel libjpeg libjpeg-devel libpng libpng-devel libpng10 libpng10-devel gd gd-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glib2 glib2-devel bzip2 bzip2-devel libevent libevent-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5 krb5-devel libidn libidn-devel openssl openssl-devel vim-minimal nano fonts-chinese gettext gettext-devel ncurses-devel gmp-devel pspell-devel unzip libcap ruby ruby-libs ruby-rdoc perl cpio expat-devel wget perl-ExtUtils-MakeMaker;
+for packages in patch make gcc gcc-c++ gcc-g77 flex bison file libtool libtool-libs autoconf kernel-devel libjpeg libjpeg-devel libpng libpng-devel libpng10 libpng10-devel gd gd-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glib2 glib2-devel bzip2 bzip2-devel libevent libevent-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5 krb5-devel libidn libidn-devel openssl openssl-devel vim-minimal nano fonts-chinese gettext gettext-devel ncurses-devel gmp-devel pspell-devel unzip libcap ruby ruby-libs ruby-rdoc perl cpio expat-devel wget sudo perl-ExtUtils-MakeMaker;
 do yum -y install $packages; done
 
 mv -f /etc/yum.conf.lnmp /etc/yum.conf
@@ -86,6 +86,11 @@ eof
 cat >>/etc/sysctl.conf<<eof
 fs.file-max=65535
 eof
+
+#enable RHEL EPEL Repo
+wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
 
 echo "======================================================="
 echo "System Packages Install Completed!"

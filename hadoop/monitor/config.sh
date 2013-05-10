@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # author: Zhou Haihan
 # web: http://abloz.com
 # date: 2012.8.22
@@ -21,7 +22,7 @@ cd $w
 hosts=(h46 h47 h48)
 
 #warning emails send  to 
-EMAIL="zhouhh@aaa.com,zhouhh@example.com"
+EMAIL="scotoma@139.com,xinqiyang@gmail.com"
 
 
 # set disk alert level percent
@@ -37,19 +38,19 @@ SENDCOUNT=5
 MEMMSG=$w/data/memmsg.txt
 MFCOUNT=$w/data/failcountmem.txt
 MFCOUNT_TOTAL=$w/data/total_failcountmem.txt
-#MTITLE="Hadoop内存告警!!"
+#MTITLE="HadoopMemWarning!!"
 MTITLE="Hadoop-memory-warning"
 
 DISKMSG=$w/data/discmsg.txt
 DFCOUNT=$w/data/failcountd.txt
 DFCOUNT_TOTAL=$w/data/total_failcountd.txt
-#DTITLE="Hadoop磁盘告警!!"
+#DTITLE="HadoopDiskWarning!"
 DTITLE="Hadoop-disk-full-warning"
 
 PROCMSG=$w/data/procmsg.txt
 PFCOUNT=$w/data/failcountproc.txt 
 PFCOUNT_TOTAL=$w/data/total_failcountproc.txt 
-#PTITLE="Hadoop进程监控告警!!"
+#PTITLE="HadoopProcess!!"
 PTITLE="Hadoop-process-exit-warning"
 
 #process monitor config

@@ -1,0 +1,60 @@
+					LNMP一键安装包 - Readme
+
+LNMP一键安装包是什么?
+_____________________
+
+
+LNMP一键安装包是一个用Linux Shell编写的可以为CentOS/RadHat、Debian/Ubuntu VPS(VDS)或独立主机安装LNMP(Nginx、MySQL、PHP、phpMyAdmin)生产环境的Shell程序。
+
+LNMP官网：http://lnmp.org
+
+作者:licess <www@lnmp.org>
+--------------------------------------------------------------------------------
+
+
+
+安装
+____
+
+CentOS系统下执行：wget -c http://soft.vpser.net/lnmp/lnmp1.0-full.tar.gz && tar zxvf lnmp1.0-full.tar.gz && cd lnmp1.0-full && ./centos.sh
+
+Debian系统下执行：wget -c http://soft.vpser.net/lnmp/lnmp1.0-full.tar.gz && tar zxvf lnmp1.0-full.tar.gz && cd lnmp1.0-full && ./debian.sh
+
+Ubuntu系统下执行：wget -c http://soft.vpser.net/lnmp/lnmp1.0-full.tar.gz && tar zxvf lnmp1.0-full.tar.gz && cd lnmp1.0-full && ./ubuntu.sh
+
+LNMP升级到LNMPA，执行：
+./apache.sh
+
+LNMP状态管理： /root/lnmp {start|stop|reload|restart|kill|status}
+LNMPA状态管理： /root/lnmpa {start|stop|reload|restart|kill|status}
+Nginx状态管理：/etc/init.d/nginx {start|stop|reload|restart}
+PHP-FPM状态管理：/etc/init.d/php-fpm {start|stop|quit|restart|reload|logrotate}
+PureFTPd状态管理： /root/pureftpd {start|stop|restart|kill|status}
+MySQL状态管理：/etc/init.d/mysql {start|stop|restart|reload|force-reload|status}
+Apache状态管理：/root/httpd {start|stop|restart|graceful|graceful-stop|configtest|status}
+
+添加虚拟主机 /root/vhost.sh
+phpinfo : http://yourIP/phpinfo.php
+phpMyAdmin : http://yourIP/phpmyadmin/
+探针 : http://yourIP/p.php
+PureFtp用户管理：http://yourIP/ftp/
+
+LNMP相关目录：
+mysql :   /usr/local/mysql
+php :     /usr/local/php
+nginx :   /usr/local/nginx
+网站目录 :     /home/wwwroot
+Nginx日志目录：/home/wwwlogs
+
+配置文件：
+Nginx主配置文件：/usr/local/nginx/conf/nginx.conf
+MySQL配置文件：/etc/my.cnf
+PHP配置文件：/usr/local/php/etc/php.ini
+PureFtpd配置文件：/usr/local/pureftpd/pure-ftpd.conf
+PureFtpd MySQL配置文件：/usr/local/pureftpd/pureftpd-mysql.conf
+Apache配置文件：/usr/local/apache/conf/httpd.conf
+
+技术支持
+————————
+
+技术支持论坛：http://bbs.vpser.net/forum-25-1.html 

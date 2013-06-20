@@ -4,6 +4,8 @@
 ## crontab -e
 ## 0 4 * * * sh /root/backup2dropbox.sh restart  
 ## 0 5 * * * sh /root/backup2dropbox.sh stop
+## 0 1 * * * sh /root/backup2dropbox.sh start
+
 
 BACKUP_SRC="/home/backup"  
 BACKUP_WWW="/home/wwwroot"     

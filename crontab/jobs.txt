@@ -1,0 +1,13 @@
+crontab jobs list
+
+
+1.time sync 
+ntpdate -u pool.ntp.org
+
+
+2.clear weedfs tempfile
+rm -rf /tmp/fscache/freeflare/upload/*
+
+
+
+

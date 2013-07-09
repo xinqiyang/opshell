@@ -700,18 +700,18 @@ cd $cur_dir
 cp vhost.sh /root/vhost.sh
 chmod +x /root/vhost.sh
 
-mkdir -p /home/wwwroot/default
-chmod +w /home/wwwroot/default
-mkdir -p /home/wwwlogs
-chmod 777 /home/wwwlogs
+mkdir -p /source/wwwroot/default
+chmod +w /source/wwwroot/default
+mkdir -p /source/wwwlogs
+chmod 777 /source/wwwlogs
 
-chown -R www:www /home/wwwroot/default
+chown -R www:www /source/wwwroot/default
 }
 
 function CreatPHPTools()
 {
 	echo "Create PHP Info Tool..."
-cat >/home/wwwroot/default/phpinfo.php<<eof
+cat >/source/wwwroot/default/phpinfo.php<<eof
 <?
 phpinfo();
 ?>
@@ -720,18 +720,18 @@ eof
 echo "Copy PHP Prober..."
 cd $cur_dir
 tar zxvf p.tar.gz
-cp p.php /home/wwwroot/default/p.php
+cp p.php /source/wwwroot/default/p.php
 
-cp conf/index.html /home/wwwroot/default/index.html
+cp conf/index.html /source/wwwroot/default/index.html
 echo "============================Install PHPMyAdmin================================="
 tar zxf phpmyadmin-latest.tar.gz
-mv phpMyAdmin-3.4.8-all-languages /home/wwwroot/default/phpmyadmin/
-cp conf/config.inc.php /home/wwwroot/default/phpmyadmin/config.inc.php
-sed -i 's/LNMPORG/LNMP.org'$RANDOM'VPSer.net/g' /home/wwwroot/default/phpmyadmin/config.inc.php
-mkdir /home/wwwroot/default/phpmyadmin/upload/
-mkdir /home/wwwroot/default/phpmyadmin/save/
-chmod 755 -R /home/wwwroot/default/phpmyadmin/
-chown www:www -R /home/wwwroot/default/phpmyadmin/
+mv phpMyAdmin-3.4.8-all-languages /source/wwwroot/default/phpmyadmin/
+cp conf/config.inc.php /source/wwwroot/default/phpmyadmin/config.inc.php
+sed -i 's/LNMPORG/LNMP.org'$RANDOM'VPSer.net/g' /source/wwwroot/default/phpmyadmin/config.inc.php
+mkdir /source/wwwroot/default/phpmyadmin/upload/
+mkdir /source/wwwroot/default/phpmyadmin/save/
+chmod 755 -R /source/wwwroot/default/phpmyadmin/
+chown www:www -R /source/wwwroot/default/phpmyadmin/
 echo "============================phpMyAdmin install completed================================="
 }
 
@@ -807,7 +807,7 @@ echo "The path of some dirs:"
 echo "mysql dir:   /usr/local/mysql"
 echo "php dir:     /usr/local/php"
 echo "nginx dir:   /usr/local/nginx"
-echo "web dir :     /home/wwwroot/default"
+echo "web dir :     /source/wwwroot/default"
 echo ""
 echo "========================================================================="
 /root/lnmp status
